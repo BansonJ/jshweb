@@ -23,6 +23,7 @@ pipeline {
             steps {
                 // yum을 이용하여 httpd 패키지를 설치합니다.
                 // sh 명령은 빌드 에이전트(VM)의 쉘에서 실행됩니다.
+		sh 'sudo ssh ansible'
                 sh 'sudo yum install -y httpd'
                 
                 // 간단한 index.html 파일 생성 (설치 확인용)
