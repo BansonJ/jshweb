@@ -1,9 +1,7 @@
 pipeline {
     // 빌드를 수행할 서버(Agent) 설정
     // 이 'label'은 Jenkins 관리 > 노드 관리에서 지정한 레이블과 일치해야 합니다.
-    agent { 
-        label 'your-ansible-node-label' // Ansible 실행 권한이 있는 VM 레이블로 변경
-    }
+    agent any
 
     // GitHub Webhook 신호가 오면 파이프라인 시작
     triggers {
